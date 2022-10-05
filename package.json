@@ -1,0 +1,23 @@
+{
+  "name": "buckle-down",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ryan-Buckley1/buckle-down.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ryan-Buckley1/buckle-down/issues"
+  },
+  "homepage": "https://github.com/Ryan-Buckley1/buckle-down#readme",
+  "devDependencies": {
+    "concurrently": "^7.4.0"
+  }
+}
