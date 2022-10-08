@@ -71,18 +71,18 @@ const typeDefs = gql`
     bills(username: String): [Bill]
   }
   type Mutation {
-    login(email: String!, password: String!): Auth //
-    addUser(username: String!, email: String!, password: String!): Auth //
-    editUser(_id: ID!, userData: UserInput!): Auth //
-    editUserPassword(password: String!): User //
-    addBill(billData: BillInput!): Bill //
-    removeBill(_id: ID!): Bill //
-    editBill(_id: ID!, billData: BillInput!): Bill //
-    addEvent(eventData: EventInput!): Event //
-    removeEvent(_id: ID!): Event //
-    editEvent(_id: ID!, eventData: EventInput!): Event //
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
+    editUser(_id: ID!, userData: UserInput!): Auth
+    editUserPassword(password: String!): User
+    addBill(billData: BillInput!): Bill
+    removeBill(_id: ID!): Bill
+    editBill(_id: ID!, billData: BillInput!): Bill
+    addEvent(eventData: EventInput!): Event
+    removeEvent(_id: ID!): Event
+    editEvent(_id: ID!, eventData: EventInput!): Event
     addFriend(friendID: ID!): User
-    removeFriend(friendID:ID!): User
+    removeFriend(friendID: ID!): User
   }
 `;
 
