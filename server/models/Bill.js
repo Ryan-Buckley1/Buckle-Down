@@ -9,6 +9,10 @@ const billSchema = new Schema(
       type: String,
       required: true,
     },
+    username: {
+      type: String,
+      required: true,
+    },
     recurring: {
       type: Number,
       required: true,

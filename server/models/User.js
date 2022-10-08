@@ -19,10 +19,10 @@ const userSchema = new Schema(
       required: true,
     },
     phone: {
-      type: String,
+      type: Number,
     },
     income: {
-      type: String,
+      type: Number,
     },
     palette: {
       type: Number,
@@ -33,6 +33,12 @@ const userSchema = new Schema(
       {
         type: Schema.Types.ObjectId,
         ref: "Event",
+      },
+    ],
+    bills: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Bill",
       },
     ],
     friends: [
@@ -60,6 +66,14 @@ userSchema.pre("save", async function (next) {
 userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
+
+userSchema.virtual("eventCount").get(function () {
+  return this.events.length;
+});
+
+userSchema.virtual("billCount").get(function () {
+  return this.bills.length;
+});
 
 const User = model("User", userSchema);
 
