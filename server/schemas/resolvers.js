@@ -15,6 +15,30 @@ const resolvers = {
       }
       throw new AuthenticationError(`You aren't logged in!`);
     },
+    user: async (parent, { _id }, context) => {
+      const singleUser = await User.findById({ _id })
+        .select("-password")
+        .populate("events");
+      return singleUser;
+    },
+    bills: async (parent, { username }, context) => {
+      const params = username ? { username } : {};
+      const allBills = await Bill.find(params);
+      return allBills;
+    },
+    bill: async (parent, { _id }, context) => {
+      const singleBill = await Bill.findOne({ _id });
+      return singleBill;
+    },
+    events: async (parent, { username }, context) => {
+      const params = username ? { username } : {};
+      const allEvents = await Event.find(params);
+      return allEvents;
+    },
+    event: async (parent, { _id }, context) => {
+      const singleEvent = await Event.findOne({ _id });
+      return singleEvent;
+    },
   },
   Mutation: {
     login: async (parent, { email, password }) => {

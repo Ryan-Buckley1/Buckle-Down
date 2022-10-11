@@ -31,6 +31,10 @@ const billSchema = new Schema(
     notes: {
       type: String,
     },
+    username: {
+      type: String,
+      required: true
+    }
   },
   {
     toJSON: {

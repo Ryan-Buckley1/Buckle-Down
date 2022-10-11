@@ -22,6 +22,7 @@ const typeDefs = gql`
     urlToPay: String
     siteUsername: String
     notes: String
+    username: String
   }
   type Event {
     _id: ID
@@ -33,6 +34,7 @@ const typeDefs = gql`
     timeEnd: Int
     allDay: Boolean
     recurring: Int
+    username: String
   }
   type Auth {
     token: ID!
@@ -63,6 +65,7 @@ const typeDefs = gql`
     timeEnd: Int
     allDay: Boolean
     recurring: Int
+    username: String
   }
   type Query {
     me: User

@@ -36,6 +36,10 @@ const eventSchema = new Schema(
       required: true,
       default: 0,
     },
+    username: {
+      type: String,
+      required: true
+    }
   },
   {
     toJSON: {
