@@ -15,6 +15,7 @@ const typeDefs = gql`
   }
   type Bill {
     _id: ID
+    date: String
     amount: Int
     company: String
     recurring: Int
@@ -47,6 +48,7 @@ const typeDefs = gql`
   input BillInput {
     amount: Int
     company: String
+    date: String
     recurring: Int
     urlToPay: String
     siteUsername: String
