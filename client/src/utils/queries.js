@@ -20,6 +20,9 @@ export const QUERY_FULL_ME = gql`
         date
         location
       }
+      friends {
+        _id
+      }
     }
   }
 `;

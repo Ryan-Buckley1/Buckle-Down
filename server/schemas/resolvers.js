@@ -86,6 +86,7 @@ const resolvers = {
         const newEvent = await Event.create(
           {
             ...eventData,
+            username: context.user.username,
           },
           { runValidators: true, new: true }
         );
@@ -125,6 +126,7 @@ const resolvers = {
         const newBill = await Bill.create(
           {
             ...billData,
+            username: context.user.username,
           },
           { runValidators: true, new: true }
         );

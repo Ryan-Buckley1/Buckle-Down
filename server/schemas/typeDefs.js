@@ -65,7 +65,6 @@ const typeDefs = gql`
     timeEnd: Int
     allDay: Boolean
     recurring: Int
-    username: String
   }
   type Query {
     me: User
@@ -80,10 +79,10 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     editUser(_id: ID!, userData: UserInput!): Auth
     editUserPassword(password: String!): User
-    addBill(billData: BillInput!): Bill
+    addBill(billData: BillInput!, username: String!): Bill
     removeBill(_id: ID!): Bill
     editBill(_id: ID!, billData: BillInput!): Bill
-    addEvent(eventData: EventInput!): Event
+    addEvent(eventData: EventInput!, username: String!): Event
     removeEvent(_id: ID!): Event
     editEvent(_id: ID!, eventData: EventInput!): Event
     addFriend(friendID: ID!): User
