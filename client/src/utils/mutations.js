@@ -116,8 +116,8 @@ export const REMOVE_EVENT = gql`
   }
 `;
 export const ADD_EVENT = gql`
-  mutation addBill($eventData: EventInput) {
-    addBill(eventData: $eventData) {
+  mutation addEvent($eventData: EventInput) {
+    addEvent(eventData: $eventData) {
       event {
         _id
         name

@@ -4,14 +4,15 @@ import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 import timeGridPlugin from "@fullcalendar/timegrid";
 import { Calendar } from "@fullcalendar/core";
 import interactionPlugin from "@fullcalendar/interaction";
+import Modal from "@mui/material/Modal";
 export default class DemoApp extends React.Component {
   render() {
     return (
       <FullCalendar
-        plugins={[timeGridPlugin, interactionPlugin]}
-        initialView="timeGridWeek"
+        plugins={[dayGridPlugin, interactionPlugin]}
+        initialView="dayGridMonth"
         dateClick={this.handleDateClick}
-        hiddenDays={[0, 4]}
+        dayHeaderFormat={{ weekday: "long" }}
       />
     );
   }
